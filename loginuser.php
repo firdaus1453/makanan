@@ -8,7 +8,7 @@
 	if (isset($_POST["username"]) && isset($_POST["password"])) {
 		// Memasukkan inputan user ke dalam variable
 		$username  = $_POST["username"];
-		$password = $_POST["password"];
+		$password = md5($_POST["password"]);
 
 		// Membuat query untuk mengambil detail user
 		$sql = "SELECT * FROM tb_user WHERE username = '$username' AND password = '$password'";
