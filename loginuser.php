@@ -40,12 +40,12 @@
 		// Mengecek datanya apakah ada
 		if (mysqli_num_rows($check) > 0) {
 			// Mengisi pesan berhasil ke response
-			$response['result'] = "1";
+			$response['result'] = 1;
 			$response['message'] = "Berhasil login!";
 			$response['data'] = $result_data;
 		}else{
 			// Mengisi pesan gagal ke response
-			$response['result'] = "0";
+			$response['result'] = 0;
 			$response['message'] = "Gagal login!";
 		}
 
