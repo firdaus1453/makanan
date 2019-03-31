@@ -48,7 +48,8 @@ $cek = mysqli_num_rows($result);
 // Melakukan kondisi untuk mengecek apakah query tadi ada isinya
 if ($cek > 0) {
 	while ($row = mysqli_fetch_assoc($result)) {
-	array_push($row['url_makanan'] = $upload_url . $row['foto_makanan']);
+	$row['url_makanan'] = $upload_url . $row['foto_makanan'];
+	array_push($row['url_makanan']);
 	$temparray[] = $row;
 	}
 
